@@ -1,13 +1,13 @@
-import { useRef } from 'react';
+import { useRef } from "react";
 
-interface PoopElProps {
+interface JangpungElProps {
   parentPosition: {
     x: number;
     y: number;
   };
 }
 
-const PoopEl = ({ parentPosition }: PoopElProps) => {
+const JangpungEl = ({ parentPosition }: JangpungElProps) => {
   const ref = useRef<HTMLDivElement>(null);
 
   let movedDistance = 0;
@@ -15,7 +15,7 @@ const PoopEl = ({ parentPosition }: PoopElProps) => {
   let Ypos = 0;
   let reverse = 1;
 
-  const poopAnimation = () => {
+  const jangpungAnimation = () => {
     if (!ref.current) return;
 
     const el = ref.current;
@@ -47,29 +47,29 @@ const PoopEl = ({ parentPosition }: PoopElProps) => {
     el.style.top = `${Ypos}px`;
     el.style.transform = `scale(${scaleRandom})`;
 
-    requestAnimationFrame(poopAnimation);
+    requestAnimationFrame(jangpungAnimation);
   };
 
-  const animationFrameId = requestAnimationFrame(poopAnimation);
+  const animationFrameId = requestAnimationFrame(jangpungAnimation);
 
   return (
     <div
       ref={ref}
       style={{
-        position: 'absolute',
+        position: "absolute",
         left: 0,
         top: 0,
-        padding: '2px',
-        border: '1px solid gray',
-        borderRadius: '4px',
-        lineHeight: '2.2',
-        fontSize: '12px',
+        padding: "2px",
+        border: "1px solid gray",
+        borderRadius: "4px",
+        lineHeight: "2.2",
+        fontSize: "12px",
         zIndex: 999999999,
       }}
     >
-      Poop
+      Jangpung
     </div>
   );
 };
 
-export default PoopEl;
+export default JangpungEl;

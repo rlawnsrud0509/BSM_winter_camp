@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import { CountryContinentMap, CountryContinent } from "./constants/dummy";
 import clsx from "clsx";
-import Poop from "./Poop";
+import Jangpung from "./components/Jangpung";
 
 const ContinentFilter: CountryContinent[] = [
   "All",
@@ -25,7 +25,7 @@ function App() {
     <main className="flex flex-col p-10 gap-3 min-h-screen w-screen">
       <span className="text-8xl">
         Country Filter
-        <Poop />
+        <Jangpung />
       </span>
       <div className="flex gap-4">
         {ContinentFilter.map((continent) => (
