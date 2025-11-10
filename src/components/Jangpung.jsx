@@ -3,8 +3,8 @@ import { Button, Flex } from "antd";
 import JangpungEl from "./JangpungEl";
 
 const Jangpung = () => {
-  const [jangpungArr, setJangpungArr] = useState<ReactNode[]>([]);
-  const jangpungButtonRef = useRef<HTMLButtonElement>(null);
+  const [jangpungArr, setJangpungArr] = useState([]);
+  const jangpungButtonRef = useRef < HTMLButtonElement > null;
 
   const handleAddJangpung = () => {
     setJangpungArr([
@@ -23,7 +23,7 @@ const Jangpung = () => {
     const current = jangpungButtonRef.current;
     if (!current) return;
 
-    const handleBlockEnterKey = (event: KeyboardEvent) => {
+    const handleBlockEnterKey = (event) => {
       if (event.key === "Enter") {
         event.preventDefault();
       }

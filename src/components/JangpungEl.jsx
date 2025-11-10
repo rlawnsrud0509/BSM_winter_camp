@@ -1,14 +1,7 @@
 import { useRef } from "react";
 
-interface JangpungElProps {
-  parentPosition: {
-    x: number;
-    y: number;
-  };
-}
-
-const JangpungEl = ({ parentPosition }: JangpungElProps) => {
-  const ref = useRef<HTMLDivElement>(null);
+const JangpungEl = ({ parentPosition }) => {
+  const ref = useRef(null);
 
   let movedDistance = 0;
   let Xpos = 0;
